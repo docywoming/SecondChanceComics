@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Chance Comics</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: url("kim-hero.jpg") center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 80px;
+      color: white;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 196, 0, 0.15);
+      border: 1px solid #f5c400;
+      color: #f5c400;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 68px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 28px;
+      line-height: 1.4;
+      color: #e6e6e6;
+      margin-bottom: 36px;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #f5c400;
+      color: #111;
+      padding: 18px 28px;
+      border-radius: 999px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-secondary {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: white;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .comics-section {
+      padding: 70px 50px 90px;
+      background: #f4f4f4;
+    }
+
+    .section-title {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .section-title span {
+      color: #d92f2f;
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 32px;
+    }
+
+    .comic-card {
+      display: block;
+    }
+
+    .comic-card img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .comic-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+    .comic-meta {
+      font-size: 16px;
+      color: #777;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content {
+        padding: 50px 28px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p {
+        font-size: 22px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .comics-section {
+        padding: 50px 20px 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">NEW ISSUE OUT NOW</div>
+      <h1>Small studio, big comic hearts.</h1>
+      <p>Second Chance Comics, featuring the psychological drama of <i>Happily Ever After</i>.</p>
+
+      <div class="hero-buttons">
+        <a href="#comics" class="btn-primary">Explore Comics</a>
+        <a href="about.html" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="comics" class="comics-section">
+    <div class="section-title">Our <span>Comics</span></div>
+
+    <div class="comic-grid">
+      <a class="comic-card" href="https://drive.google.com/file/d/10LeTELsNj1-fzgSQUU2SkZU-V9mUdbbh/view?usp=drive_link" target="_blank">
+        <img src="cover1.jpg" alt="Issue 1 cover">
+        <div class="comic-title">Happily Ever After #1</div>
+        <div class="comic-meta">Read PDF</div>
+      </a>
+
+      <a class="comic-card" href="https://drive.google.com/file/d/1bdWjWR_KzhES4-6xvvHfPRUfolQv8UAP/view?usp=drive_link" target="_blank">
+        <img src="cover2.jpg" alt="Issue 2 cover">
+        <div class="comic-title">Happily Ever After #2</div>
+        <div class="comic-meta">Read PDF</div>
+      </a>
+
+      <a class="comic-card" href="https://drive.google.com/file/d/18jC_fxEEc1teRknKf6PVbNJWUd-yfrjS/view?usp=drive_link" target="_blank">
+        <img src="cover3.jpg" alt="Issue 3 cover">
+        <div class="comic-title">Happily Ever After #3</div>
+        <div class="comic-meta">Read PDF</div>
+      </a>
+
+      <a class="comic-card" href="https://drive.google.com/file/d/1LXiz-gc_hW4LnrJnTfxKfx_HddE5ex8W/view?usp=drive_link" target="_blank">
+        <img src="cover4.jpg" alt="Issue 4 cover">
+        <div class="comic-title">Happily Ever After #4</div>
+        <div class="comic-meta">Read PDF</div>
+      </a>
+    </div>
+  </section>
+<div class="wrap">
+
+<h1>Reader Comments</h1>
+
+<p>Talk about any issue here.</p>
+
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = "https://secondchancecomics.com/comments.html";
+  this.page.identifier = "comments-page";
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://YOUR_SHORTNAME.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+</div>
+
+</body>
+</html>
