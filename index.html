@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Second Chance Comics</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -85,6 +86,8 @@
       border-radius: 999px;
       font-weight: bold;
       display: inline-block;
+      border: none;
+      cursor: pointer;
     }
 
     .btn-secondary {
@@ -114,12 +117,17 @@
 
     .comic-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 32px;
+      max-width: 900px;
     }
 
     .comic-card {
       display: block;
+      background: white;
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.10);
     }
 
     .comic-card img {
@@ -130,7 +138,7 @@
     }
 
     .comic-title {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 800;
       margin-top: 16px;
     }
@@ -139,6 +147,32 @@
       font-size: 16px;
       color: #777;
       margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .comic-action {
+      margin-top: 14px;
+    }
+
+    .comments-section {
+      padding: 70px 50px 90px;
+      background: #ffffff;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .wrap h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .wrap p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
     }
 
     @media (max-width: 900px) {
@@ -158,22 +192,29 @@
         font-size: 34px;
       }
 
-      .comics-section {
+      .comics-section,
+      .comments-section {
         padding: 50px 20px 70px;
       }
     }
   </style>
 </head>
+
 <body>
 
   <section class="hero">
     <div class="hero-content">
       <div class="hero-tag">NEW ISSUE OUT NOW</div>
-      <h1>Small studio, big comic hearts.</h1>
-      <p>Second Chance Comics, featuring the psychological drama of <i>Happily Ever After</i>.</p>
+
+      <h1>Stories that don’t come back the same.</h1>
+
+      <p>
+        Second Chance Comics, featuring the psychological drama of
+        <i>Happily Ever After</i>.
+      </p>
 
       <div class="hero-buttons">
-        <a href="#comics" class="btn-primary">Explore Comics</a>
+        <a href="#comics" class="btn-primary">Read Comics</a>
         <a href="about.html" class="btn-secondary">Our Story</a>
       </div>
     </div>
@@ -183,56 +224,72 @@
     <div class="section-title">Our <span>Comics</span></div>
 
     <div class="comic-grid">
-      <a class="comic-card" href="https://drive.google.com/file/d/10LeTELsNj1-fzgSQUU2SkZU-V9mUdbbh/view?usp=drive_link" target="_blank">
-        <img src="cover1.jpg" alt="Issue 1 cover">
-        <div class="comic-title">Happily Ever After #1</div>
-        <div class="comic-meta">Read PDF</div>
-      </a>
 
-      <a class="comic-card" href="https://drive.google.com/file/d/1bdWjWR_KzhES4-6xvvHfPRUfolQv8UAP/view?usp=drive_link" target="_blank">
-        <img src="cover2.jpg" alt="Issue 2 cover">
-        <div class="comic-title">Happily Ever After #2</div>
-        <div class="comic-meta">Read PDF</div>
-      </a>
+      <div class="comic-card">
+        <img src="cover1.jpg" alt="Happily Ever After cover">
 
-      <a class="comic-card" href="https://drive.google.com/file/d/18jC_fxEEc1teRknKf6PVbNJWUd-yfrjS/view?usp=drive_link" target="_blank">
-        <img src="cover3.jpg" alt="Issue 3 cover">
-        <div class="comic-title">Happily Ever After #3</div>
-        <div class="comic-meta">Read PDF</div>
-      </a>
+        <div class="comic-title">Happily Ever After</div>
+        <div class="comic-meta">
+          Psychological drama. Myth. Resurrection. Read the full series on GlobalComix.
+        </div>
 
-      <a class="comic-card" href="https://drive.google.com/file/d/1LXiz-gc_hW4LnrJnTfxKfx_HddE5ex8W/view?usp=drive_link" target="_blank">
-        <img src="cover4.jpg" alt="Issue 4 cover">
-        <div class="comic-title">Happily Ever After #4</div>
-        <div class="comic-meta">Read PDF</div>
-      </a>
+        <div class="comic-action">
+          <iframe
+            allowfullscreen
+            style="border: none;"
+            src="https://globalcomix.com/c/happily-ever-after/widgets/button"
+            width="200"
+            height="32">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="comic-card">
+        <img src="exclusive.jpg" alt="Exclusive comic cover">
+
+        <div class="comic-title">Exclusive Issue</div>
+        <div class="comic-meta">
+          A website-only comic available here at Second Chance Comics.
+        </div>
+
+        <div class="comic-action">
+          <a href="exclusive.html" class="btn-primary">Read Here</a>
+        </div>
+      </div>
+
     </div>
   </section>
-<div class="wrap">
 
-<h1>Reader Comments</h1>
+  <section class="comments-section">
+    <div class="wrap">
+      <h1>Reader Comments</h1>
 
-<p>Talk about any issue here.</p>
+      <p>Talk about any issue here.</p>
 
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://second-chance-comics.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <div id="disqus_thread"></div>
+
+      <script>
+        /*
+        var disqus_config = function () {
+          this.page.url = PAGE_URL;
+          this.page.identifier = PAGE_IDENTIFIER;
+        };
+        */
+
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://second-chance-comics.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+
+      <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+  </section>
 
 </body>
 </html>
