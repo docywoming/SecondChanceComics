@@ -206,7 +206,7 @@
     <div class="hero-content">
       <div class="hero-tag">NEW ISSUE OUT NOW</div>
 
-      <h1>Stories that don’t come back the same.</h1>
+      <h1>Small company. Big heart.</h1>
 
       <p>
         Second Chance Comics, featuring the psychological drama of
@@ -225,6 +225,7 @@
 
     <div class="comic-grid">
 
+      <!-- GlobalComix Series -->
       <div class="comic-card">
         <img src="cover1.jpg" alt="Happily Ever After cover">
 
@@ -234,16 +235,17 @@
         </div>
 
         <div class="comic-action">
-          <iframe
-            allowfullscreen
-            style="border: none;"
-            src="https://globalcomix.com/c/happily-ever-after/widgets/button"
-            width="200"
-            height="32">
-          </iframe>
+          <a 
+            href="https://globalcomix.com/c/happily-ever-after?sort=reverse"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary">
+            Read on GlobalComix
+          </a>
         </div>
       </div>
 
+      <!-- Exclusive Comic -->
       <div class="comic-card">
         <img src="exclusive.jpg" alt="Exclusive comic cover">
 
@@ -269,13 +271,6 @@
       <div id="disqus_thread"></div>
 
       <script>
-        /*
-        var disqus_config = function () {
-          this.page.url = PAGE_URL;
-          this.page.identifier = PAGE_IDENTIFIER;
-        };
-        */
-
         (function() {
           var d = document, s = d.createElement('script');
           s.src = 'https://second-chance-comics.disqus.com/embed.js';
